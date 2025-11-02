@@ -47,18 +47,48 @@
       display:block;
       border-radius:0;
     }
-    .hint{
-      position:fixed;
-      left:50%;
-      transform:translateX(-50%);
-      bottom:18px;
-      background:rgba(0,0,0,0.45);
-      color:#fff;
-      padding:7px 12px;
-      border-radius:20px;
-      font-size:13px;
-      backdrop-filter:blur(4px);
-    }
+.hint{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:18px;
+  background:rgba(0,0,0,0.45);
+  color:#fff;
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:13px;
+  backdrop-filter:blur(4px);
+  display:flex;
+  align-items:center;
+  gap:8px; /* 按钮与文字间距 */
+}
+
+/* 绿色下载按钮样式 */
+.download-btn{
+  background:#36d399; /* 清新绿色 */
+  color:#fff;
+  border:none;
+  border-radius:16px;
+  padding:5px 12px;
+  font-size:12px;
+  cursor:pointer;
+  transition:all 0.2s;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+/* 按钮悬停效果 */
+.download-btn:hover{
+  background:#2bb673; /* 加深绿色 */
+  transform:scale(1.05);
+}
+
+/* 可选：添加下载图标（需引入字体图标库） */
+.download-btn::before{
+  content:"↓"; /* 简易下载符号，可替换为图标 */
+  font-size:14px;
+}
     select.jump{
       width:90%;
       margin:20px auto;
@@ -89,7 +119,10 @@
       <option value="tuiguang.baidu.com/oneWeb.html">镜像站2</option>
     </select> -->
 
-    <div class="hint">点击图片进入</div>
+<div class="hint">
+  下载注册送58金币
+  <button class="download-btn">立即下载</button>
+</div>
   </div>
 
   <script>
